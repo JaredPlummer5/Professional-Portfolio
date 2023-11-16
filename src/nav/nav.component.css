@@ -1,0 +1,66 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem; /* Use rem units for padding */
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem; /* Space between links */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Adjusted padding */
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between items in the toolbar */
+}
+
+.toolbar img {
+  width: 40px; /* Adjusted width */
+}
+
+.toolbar svg {
+  fill: white;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.toolbar svg:hover {
+  fill: #ccc;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links, .toolbar {
+    width: 100%;
+    justify-content: space-around;
+  }
+}

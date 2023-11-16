@@ -1,0 +1,90 @@
+// Base styles for the navbar
+.navbar
+  background-color: #2E4057
+  color: #333333
+  padding: 10px 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  width: 100%
+  box-sizing: border-box
+
+  .hamburger-menu
+    display: none
+    background-color: transparent
+    border: none
+    font-size: 1.5em
+    cursor: pointer
+
+  a
+    color: #F4C724
+    text-decoration: none
+    margin: 0 10px
+
+    &:hover
+      color: #EA5455
+
+  .navbar-links-container
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    .navbar-links, .social-icons
+      display: flex
+      gap: 15px
+
+.toolbar
+  display: flex
+  align-items: center
+
+  img
+    margin-right: 10px
+
+// ... existing styles ...
+
+// For larger screens, keep the hamburger menu hidden
+@media (min-width: 769px)
+  .hamburger-menu
+    display: none
+
+// For smaller screens, adjust the navbar
+@media (max-width: 768px)
+  .navbar
+    flex-direction: column
+    align-items: flex-start
+    padding: 5px 10px
+
+  .hamburger-menu
+    display: block
+    margin-bottom: 10px
+
+  .navbar-links-container
+    display: none
+    width: 100%
+
+    &.active
+      display: flex
+
+
+  @media (max-width: 600px)
+  .navbar
+    flex-direction: column
+    padding: 5px 10px
+
+  .hamburger-menu
+    display: block
+    margin-bottom: 10px
+
+  .navbar-links-container, .toolbar
+    flex-direction: column
+    align-items: flex-start
+
+    a, img
+      margin-bottom: 5px
+
+  .navbar-links-container
+    display: none
+
+    &.active
+      display: flex
