@@ -1,0 +1,118 @@
+// Styles for the wrapper containing the repositories
+.RepoWrapper
+  width: 680px
+  height: 400px
+  -webkit-font-smoothing: antialiased
+  margin: 50px auto
+  margin-bottom: 200px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
+// Styles for a box element
+.box
+  position: absolute
+  width: 180px
+  height: 180px
+  background-color: #06f
+  display: inline-block
+  margin: 10px 20px 50px 235px
+
+// Styles for the creative-pro element
+.creative-pro
+  border: 1px solid #ffff
+  color: #00FFF2
+  background: transparentize(black, 0.1)
+  height: 600px
+
+  &:hover
+    cursor: pointer
+    box-shadow: 0 4px 8px 0 #ffff, 0 6px 20px 0 #ffff
+
+// Styles for the card displaying each repository
+.card
+  background-color: #1f1f1f
+  color: #e0e0e0
+  border-radius: 10px
+  padding: 20px
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1)
+  transition: transform 0.3s, box-shadow 0.3s
+
+  h3
+    font-size: 1.5em
+    margin-bottom: 10px
+
+  p
+    margin-bottom: 15px
+
+  a
+    color: #00FFF2
+    text-decoration: none
+    font-weight: bold
+    display: flex
+    align-items: center
+
+    &:hover
+      text-decoration: underline
+
+    &::before
+      content: '⮉'
+      margin-right: 5px
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)
+
+// Adjust the dimensions of the cards for better fit
+.card, .box, .creative-pro
+  width: 150px
+  height: 150px
+  margin: 5px
+
+// Adjustments for text size, padding and margins inside the cards
+.card
+  h3
+    font-size: 1.2em
+  p
+    font-size: 0.9em
+  a
+    font-size: 0.8em
+  padding: 10px
+  h3, p, a
+    margin: 5px 0
+
+// Responsive styles for tablets and phones
+// Adjustments for medium-sized devices (tablets)
+@media (max-width: 992px) and (min-width: 769px)
+  .RepoWrapper
+    width: 90%
+    margin: 30px auto
+  .card
+    max-width: 45%
+  .creative-pro, .box
+    height: 400px
+
+// Adjustments for small devices (phones)
+@media (max-width: 768px)
+  .RepoWrapper
+    width: 100%
+    margin: 20px auto
+  .card
+    max-width: 100%
+    margin-bottom: 20px
+    h3
+      font-size: 1em
+    p
+      font-size: 0.8em
+    a
+      font-size: 0.7em
+  .creative-pro, .box
+    height: 250px
+  h2.titles
+    font-size: 1.4em
+    text-align: center
+    margin-top: 20px
+
+  .navbar
+    padding: 5px 10px
